@@ -7,6 +7,12 @@
   overflow-y: hidden;
 }
 
+#TOC .title {
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px
+}
+
 #TOC ol {
   padding: 0;
 }

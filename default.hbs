@@ -99,12 +99,19 @@
     <script type="text/javascript" src="{{asset "js/search.js"}}"></script>
     <script type="text/javascript">
         $(function(){
-            $("#TOC").initTOC({
+            $("#TOC .structure").initTOC({
                 selector: 'h1, h2, h3',
                 scope: '.post-full-content',
                 overwrite: false,
                 prefix: 'toc'
             });
+            if ($("#TOC .structure li").length === 0) {
+                $("#TOC .structure").html(
+                    "<div>这篇文章没有目录</div>" +
+                    "<div>如阅读遇到问题请反馈</div>" +
+                    "<div>邮箱：digimonx@qq.com</div>"
+                );
+            }
             window.myScroll = new IScroll('#TOC', {
                 mouseWheel: true,
                 scrollbars: true
