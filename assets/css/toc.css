@@ -1,0 +1,18 @@
+#TOC {
+  width: 300px;
+  font-size: 14px;
+  position: fixed;
+  top: 110px;
+  bottom: 50px;
+  overflow-y: hidden;
+}
+
+#TOC ol {
+  padding: 0;
+}
+
+#TOC ol li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}

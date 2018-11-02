@@ -1,0 +1,34 @@
+.post-full-header {
+  padding-left: 340px;
+  max-width: 4000px;
+}
+
+.post-full-content {
+  padding: 0;
+  position: relative;
+}
+
+.post-content {
+  max-width: 4000px;
+  padding-left: 340px;
+}
+
+.inner-full {
+  max-width: 4000px;
+}
+
+.post-full-title {
+  font-size: 4rem;
+}
+.post-full-content h1 {
+  font-size: 3.5rem;
+}
+.post-full-content h2 {
+  font-size: 3rem;
+}
+.post-full-content h3 {
+  font-size: 2.5rem;
+}
+.post-full-content h4 {
+  font-size: 2rem;
+}
