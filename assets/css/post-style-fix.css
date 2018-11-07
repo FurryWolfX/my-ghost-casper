@@ -32,3 +32,13 @@
 .post-full-content h4 {
   font-size: 2rem;
 }
+
+@media (max-width: 800px) {
+  #TOC {
+    display: none;
+  }
+  .post-full-header,
+  .post-content {
+    padding-left: 0;
+  }
+}
