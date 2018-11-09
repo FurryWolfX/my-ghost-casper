@@ -16,8 +16,7 @@
                 <p>{{excerpt words="33"}}</p>
             </section>
         </a>
-        <footer class="post-card-meta">
-
+        <footer class="post-card-meta" style="align-items: center;">
             <ul class="author-list">
             {{#foreach authors}}
                 <li class="author-list-item">
@@ -34,8 +33,10 @@
                 </li>
             {{/foreach}}
             </ul>
-
-            <span class="reading-time">{{date format='YYYY-MM-DD'}}</span>
+            <div class="reading-time">
+                <div style="line-height: 16px;font-size:12px;">发布：{{date published_at format='YYYY-MM-DD'}}</div>
+                <div style="line-height: 16px;font-size:12px;">更新：{{date updated_at format='YYYY-MM-DD'}}</div>
+            </div>
         </footer>
     </div>
 </article>
