@@ -15,6 +15,7 @@
 
 #TOC ol {
   padding: 0;
+  padding-left: 10px;
 }
 
 #TOC ol li {
@@ -22,6 +23,10 @@
   text-overflow: ellipsis;
   white-space: nowrap;
   list-style: none;
+}
+
+#TOC ol li a{
+  text-decoration: none;
 }
 
 .outer {
