@@ -21,4 +21,9 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+  list-style: none;
+}
+
+.outer {
+  padding-left: 2vw;
 }

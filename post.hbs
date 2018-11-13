@@ -132,6 +132,45 @@ into the {body} of the default.hbs template --}}
 
 {{!-- The #contentFor helper here will send everything inside it up to the matching #block helper found in default.hbs --}}
 {{#contentFor "scripts"}}
+<script type="text/javascript" src="{{asset "js/jQuery-TOC-0.0.5/dist/jquery.toc.min.js"}}"></script>
+<script type="text/javascript">
+    $(function(){
+        $("#TOC .structure").initTOC({
+            selector: 'h1, h2, h3',
+            scope: '.post-full-content',
+            overwrite: false,
+            prefix: 'toc'
+        });
+        if ($("#TOC .structure li").length === 0) {
+            $("#TOC .structure").html(
+                "<div>这篇文章没有目录</div>" +
+                "<div>如阅读遇到问题请反馈</div>" +
+                "<div>邮箱：digimonx@qq.com</div>"
+            );
+        } else {
+            // 生成数字
+            var $lv1 = $("#TOC .structure > ol > li");
+            $lv1.each(function(i) {
+                var lv1index = i + 1;
+                $(this).children("a").prepend(lv1index + " ")
+                var $lv2 = $(this).children("ol").children("li");
+                $lv2.each(function(j) {
+                    var lv2index = lv1index + "." + (j + 1);
+                    $(this).children("a").prepend(lv2index + " ")
+                    var $lv3 = $(this).children("ol").children("li");
+                    $lv3.each(function(k) {
+                        var lv3index = lv2index + "." + (k + 1);
+                        $(this).children("a").prepend(lv3index + " ")
+                    })
+                });
+            });
+        }
+        window.myScroll = new IScroll('#TOC', {
+            mouseWheel: true,
+            scrollbars: true
+        });
+    });
+</script>
 <script>
 
 // NOTE: Scroll performance is poor in Safari
