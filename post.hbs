@@ -141,7 +141,7 @@ into the {body} of the default.hbs template --}}
         $("#TOC .structure").initTOC({
             selector: 'h1, h2, h3',
             scope: '.post-full-content',
-            overwrite: false,
+            overwrite: true,
             prefix: 'toc'
         });
         if ($("#TOC .structure li").length === 0) {
