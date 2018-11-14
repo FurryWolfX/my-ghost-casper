@@ -10,11 +10,14 @@
 #TOC .title {
   padding-bottom: 10px;
   font-weight: bold;
-  font-size: 20px
+  font-size: 20px;
 }
 
 #TOC ol {
   padding: 0;
+}
+
+#TOC ol ol {
   padding-left: 10px;
 }
 
@@ -25,8 +28,15 @@
   list-style: none;
 }
 
-#TOC ol li a{
+#TOC ol li a {
   text-decoration: none;
+  box-shadow: none;
+}
+
+#TOC span.number {
+  font-style: italic;
+  padding-right: 10px;
+  font-size: 12px;
 }
 
 .outer {

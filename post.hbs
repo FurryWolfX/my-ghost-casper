@@ -135,6 +135,9 @@ into the {body} of the default.hbs template --}}
 <script type="text/javascript" src="{{asset "js/jQuery-TOC-0.0.5/dist/jquery.toc.min.js"}}"></script>
 <script type="text/javascript">
     $(function(){
+        function genSpan(text) {
+            return "<span class='number'>" + text + "</span>";
+        }
         $("#TOC .structure").initTOC({
             selector: 'h1, h2, h3',
             scope: '.post-full-content',
@@ -152,15 +155,15 @@ into the {body} of the default.hbs template --}}
             var $lv1 = $("#TOC .structure > ol > li");
             $lv1.each(function(i) {
                 var lv1index = i + 1;
-                $(this).children("a").prepend(lv1index + " ")
+                $(this).children("a").prepend(genSpan(lv1index));
                 var $lv2 = $(this).children("ol").children("li");
                 $lv2.each(function(j) {
                     var lv2index = lv1index + "." + (j + 1);
-                    $(this).children("a").prepend(lv2index + " ")
+                    $(this).children("a").prepend(genSpan(lv2index));
                     var $lv3 = $(this).children("ol").children("li");
                     $lv3.each(function(k) {
                         var lv3index = lv2index + "." + (k + 1);
-                        $(this).children("a").prepend(lv3index + " ")
+                        $(this).children("a").prepend(genSpan(lv3index));
                     })
                 });
             });
