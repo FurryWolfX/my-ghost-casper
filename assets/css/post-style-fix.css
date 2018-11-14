@@ -1,6 +1,12 @@
-.post-full-header {
+.post-full-header,
+.post-full-footer,
+.read-next {
   padding-left: 340px;
   max-width: 4000px;
+}
+
+.read-next {
+  background-color: #fff;
 }
 
 .post-full-content {
@@ -41,4 +47,8 @@
   .post-content {
     padding-left: 0;
   }
+}
+
+.site-footer {
+  z-index: 100;
 }
