@@ -44,7 +44,9 @@
     display: none;
   }
   .post-full-header,
-  .post-content {
+  .post-content,
+  .post-full-footer,
+  .read-next {
     padding-left: 0;
   }
 }

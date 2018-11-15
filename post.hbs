@@ -10,6 +10,12 @@ into the {body} of the default.hbs template --}}
 </header>
 
 <link rel="stylesheet" href="{{asset "css/post-style-fix.css"}}" />
+<link rel="stylesheet" href="{{asset "css/toc.css"}}" />
+{{!-- iscroll --}}
+<script src="{{asset "js/iscroll-5.2.0/build/iscroll.js"}}"></script>
+{{!-- prism --}}
+<link rel="stylesheet" type="text/css" href="{{asset "js/prism/TomorrowNight.css"}}" />
+<script src="{{asset "js/prism/prism.min.js"}}"></script>
 
 {{!-- Everything inside the #post tags pulls data from the post --}}
 {{#post}}
@@ -19,7 +25,7 @@ into the {body} of the default.hbs template --}}
         <article class="post-full {{post_class}} no-image">
             <header class="post-full-header">
                 <section class="post-full-meta">
-                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="D MMMM YYYY"}}</time>
+                    <time class="post-full-meta-date" datetime="{{date format="YYYY-MM-DD"}}">{{date format="YYYY年MM月DD日"}}</time>
                     {{#primary_tag}}
                         <span class="date-divider">/</span> <a href="{{url}}">{{name}}</a>
                     {{/primary_tag}}
