@@ -1,6 +1,6 @@
 .post-full-header,
 .post-full-footer,
-.read-next {
+.read-next.outer {
   padding-left: 340px;
   max-width: 4000px;
 }
